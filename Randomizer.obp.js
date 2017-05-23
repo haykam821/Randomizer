@@ -5,8 +5,8 @@ function getRandomIntInclusive(min, max) {
 }
 
 exports.onMessageReceived = (function Version(bot, doc, user, userID, channelID, message, event) {
-    require('./../Onebot.js').registerCmd([['coin']], 'Flips a two-sided Bitcoin.');
-        require('./../Onebot.js').registerCmd([['random', 'rand'],'<min> <max>'], 'Picks a number between two integers.');
+    require('./../Exports.js').registerCmd([['coin']], 'Flips a two-sided Bitcoin.');
+        require('./../Exports.js').registerCmd([['random', 'rand'],'<min> <max>'], 'Picks a number between two integers.');
 
         if (message === doc.prefix + "coin"){
         var side = getRandomIntInclusive(0,1) == 0 ? "heads" : "tails"
